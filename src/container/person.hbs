@@ -27,9 +27,7 @@
           <p><b> Degree: </b>{{degree}}</p>
           <p><b> Major: </b>{{major}}</p>
           <p><b> Iniversity: </b>{{university}}</p>
-          <p><b>
-              Graduation:
-            </b>{{graduationYear}}</p>
+          <p><b>Graduations:</b>{{graduationYear}}</p>
         </ul>
       {{/each}}
     </div>
@@ -41,8 +39,7 @@
         <ul>
           <p><b> Company: </b>{{company}}</p>
           <p><b> Profession: </b>{{title}}</p>
-          <p><b> Duration: </b>{{startDate}}
-            to
+          <p><b> Duration: </b>{{startDate}}to
             {{endDate}}</p>
           <p><b> Responsibilities: </b></p>
           <ul>
@@ -76,8 +73,7 @@
                     <p>
                       <a
                         href='john.smith@example.com'
-                      >{{email}}</a>
-                    </p>
+                      >{{email}}</a></p>
                   {{/with}}
                   <h3>Members:</h3>
                   <ul>
@@ -85,26 +81,24 @@
                       <p><b> Name: </b>{{name}}</p>
                       <p><b> Profession: </b>{{title}}</p>
                       <p><b> Email: </b>
-                        <a href='alice.johnson@example.com'>
-                          {{email}}</a>
-                      </p>
+                        <a
+                          href='alice.johnson@example.com'
+                        >{{email}}</a></p>
                       <p><b> Skills: </b>{{skills}}</p>
                       <h3><b> Teams: </b></h3>
                       <ul>
                         {{#each projects}}
                           <p><b> Name: </b>{{name}}</p>
-                          <p><b>Description:
-                            </b>{{description}}</p>
-                          <p><b>
-                              Technologies:
-                            </b>{{technologies}}</p>
+                          <p><b
+                            >Description:</b>{{description}}</p>
+                          <p><b
+                            >Technologies:</b>{{technologies}}</p>
                           <h3><b> Members: </b></h3>
                           <ul>
                             {{#each team_members}}
                               <p><b> Name: </b>{{name}}</p>
-                              <p><b>
-                                  Profession:
-                                </b>{{title}}</p>
+                              <p><b
+                                >Profession:</b>{{title}}</p>
                             {{/each}}
                           </ul>
                         {{/each}}
