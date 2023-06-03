@@ -1,0 +1,109 @@
+<div><h2>{{name}}!</h2></div>
+<hr />
+<p><b>Description - </b>{{description}}</p>
+{{#with history}}
+  <p><em>History of language - </em></p>
+  <ul>
+    <p><b>Year - </b>{{year}}</p>
+    <p><b>Founder - </b>{{founder}}</p>
+  </ul>
+{{/with}}
+<p><b>Types of language: </b></p>
+<ul>
+  {{#each types}}
+    <li>
+      <span class='badge text-bg-primary'>{{this}}</span>
+    </li>
+  {{/each}}
+</ul>
+<div>
+  <b>Syntax:</b>
+  {{#with syntax}}
+    <ul>
+      <p><span class='badge text-bg-primary'>Info:</span>
+        {{#each variables}}
+          {{this}}
+          {{#unless @last}}, {{/unless}}
+        {{/each}}</p>
+      <p>
+        <span class='badge text-bg-primary'>
+          Functions:
+        </span>
+        {{functions}}</p>
+      <p>
+        <span class='badge text-bg-primary'>
+          Conditionals:
+        </span>
+        {{#each conditionals}}
+          {{this}}
+          {{#unless @last}}, {{/unless}}
+        {{/each}}</p>
+      <p>
+        <span class='badge text-bg-primary'> Loops:</span>
+        {{#each loops}}
+          {{this}}
+          {{#unless @last}}, {{/unless}}
+        {{/each}}
+        <p>
+          <span class='badge text-bg-primary'>
+            Classes:
+          </span>
+          {{classes}}</p>
+      </p>
+    </ul>
+  {{/with}}
+</div>
+<div>
+  <hr>
+  <p>
+    <b>Features: </b>
+    <ul>
+      {{#each features}}
+        <li>
+        <button type='button' class='btn btn-light'>
+          {{this}}
+        </button>
+      {{/each}}
+      </li>
+    </ul>
+  </p>
+</div>
+<div>
+  <p>
+    <b>Libraries: </b>
+    <ul>
+      {{#each libraries}}
+        <li>
+        <button type='button' class='btn btn-light'>
+          {{this}}
+        </button>
+      {{/each}}
+      </li>
+    </ul>
+  </p>
+</div>
+<div>
+  <p>
+    <b>Tools: </b>
+    <ul>
+      {{#each tools}}
+        <li>
+        <button type='button' class='btn btn-light'>
+          {{this}}
+        </button>
+      {{/each}}
+      </li>
+    </ul>
+  </p>
+</div>
+<hr>
+<div>
+  <p> <em> Community: </em> </p>
+    <ul>
+      {{#each community}}
+        <p> <b>Name - </b> <button type="button" class="btn btn-link"> {{name}} </button> </p>
+        <p> <b>Type - </b> {{type}}. </p>
+        <br>
+      {{/each}}
+    </ul>
+</div>
