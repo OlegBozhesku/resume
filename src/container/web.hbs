@@ -7,13 +7,11 @@
       <li><strong>Name - </strong> {{name}}</li>
       <p><b>Version - </b> {{version}} </p>
       <p><b>Description - </b> {{description}} </p>
-
       <ul>
         {{#each elements}}
           <p><em>Elements:</em></p>
           <li><b>Name - </b> {{name}} </li>
           <li><b>Description - </b> {{description}} </li>
-
           <ul>
             {{#each attributes}}
               <p><em>Attributes:</em></p>
@@ -26,7 +24,6 @@
         {{/each}}</ul>
       <div>
         {{#if properties}} <p><b>Properties:</b></p> {{/if}}
-
         {{#each properties}}
           <ul>
             <li><b>Name - </b> {{name}} </li>
@@ -58,10 +55,8 @@
               {{/each}}
             </ul>
           </ul>
-
         {{/each}}
       </div>
-
       <hr /><br />
     {{/each}}
   </ul>
