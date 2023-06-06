@@ -1,0 +1,179 @@
+<div class='d-grid gap-2'>
+  <button
+    class='btn btn-primary'
+    type='button'
+  >{{name}}</button>
+</div>
+<hr />
+<p><b>Description:</b> {{description}} </p>
+<p><b>Price:</b> {{price}} </p>
+<p><b>Category:</b> {{category}} </p>
+<br />
+<div>
+  <em> Features: </em>
+  <br />
+  <br />
+
+  {{#with features}}
+    <ul>
+      <p>
+        <button
+          type='button'
+          class='btn btn-outline-primary'
+        > Processor: </button>
+      </p>
+      {{#with processor}}
+        <ul>
+          <li> <b> Brand: </b> {{brand}} </li>
+          <li> <b> Model: </b> {{model}} </li>
+          <li> <b> Speed: </b> {{speed}} </li>
+          <li> <b> Cores: </b> {{cores}} </li>
+          <li> <b> Cache: </b> {{cache}} </li>
+        </ul>
+      {{/with}}
+      <br />
+      <p>
+        <button
+          type='button'
+          class='btn btn-outline-primary'
+        > Memory: </button>
+      </p>
+      {{#with memory}}
+        <ul>
+          <li> <b> Type: </b> {{type}} </li>
+          <li> <b> Size: </b> {{size}} </li>
+          <li> <b> Speed: </b> {{speed}} </li>
+        </ul>
+      {{/with}}
+      <br />
+      <p>
+        <button
+          type='button'
+          class='btn btn-outline-primary'
+        > Storage: </button>
+      </p>
+      {{#with storage}}
+        <ul>
+          <li> <b> Type: </b> {{type}} </li>
+          <li> <b> Size: </b> {{size}} </li>
+        </ul>
+      {{/with}}
+      <br />
+      <p>
+        <button
+          type='button'
+          class='btn btn-outline-primary'
+        > Display: </button>
+      </p>
+      {{#with processor}}
+        <ul>
+          <li> <b> Size: </b> {{size}} </li>
+          <li> <b> Resolution: </b> {{resolution}} </li>
+          <li> <b> Color space: </b> {{color_space}} </li>
+          <li> <b> Brightness: </b> {{brightness}} </li>
+          <li> <b> Refresh rate: </b> {{refresh_rate}} </li>
+        </ul>
+      {{/with}}
+      <br />
+      <p>
+        <button
+          type='button'
+          class='btn btn-outline-primary'
+        > Graphics: </button>
+      </p>
+      {{#with memory}}
+        <ul>
+          <li> <b> Brand: </b> {{brand}} </li>
+          <li> <b> Model: </b> {{model}} </li>
+          <li> <b> Memory: </b> {{memory}} </li>
+        </ul>
+      {{/with}}
+      <br />
+      <p>
+        <button
+          type='button'
+          class='btn btn-outline-primary'
+        > Ports: </button>
+      </p>
+      {{#each ports}}
+        <ul>
+          <li> <b> Type: </b> {{type}} </li>
+          <li> <b> Count: </b> {{count}} </li>
+          <li> <b> Features: </b> {{features}} </li>
+        </ul>
+      {{/each}}
+      <br />
+      <p>
+        <button
+          type='button'
+          class='btn btn-outline-primary'
+        > Battery: </button>
+      </p>
+      {{#with battery}}
+        <ul>
+          <li> <b> Type: </b> {{type}} </li>
+          <li> <b> Capacity: </b> {{capacity}} </li>
+          <li> <b> Life: </b> {{life}} </li>
+        </ul>
+      {{/with}}
+      <br />
+      <p>
+        <button
+          type='button'
+          class='btn btn-outline-primary'
+        > Weight: </button>
+      </p>
+      <ul>
+        <li> <b> Weight: </b> {{weight}} </li>
+      </ul>
+      <br />
+      <p>
+        <button
+          type='button'
+          class='btn btn-outline-primary'
+        > Dimensions: </button>
+      </p>
+      {{#with dimensions}}
+        <ul>
+          <li> <b> Height: </b> {{height}} </li>
+          <li> <b> Width: </b> {{width}} </li>
+          <li> <b> Depth: </b> {{depth}} </li>
+        </ul>
+      {{/with}}
+      <br />
+      <p>
+        <button
+          type='button'
+          class='btn btn-outline-primary'
+        > Operating system: </button>
+      </p>
+      <ul>
+        <li>
+          <b> Operating system: </b>
+          {{operating_system}}
+        </li>
+      </ul>
+      <br />
+      <p>
+        <button
+          type='button'
+          class='btn btn-outline-primary'
+        >
+          Accessories:
+        </button>
+      </p>
+      {{#each accessories}}
+        <ul>
+          <li>
+            <b> Name: </b>
+            <button type='button' class='btn btn-link'>
+              {{name}}
+            </button>
+          </li>
+          <li> <b> Price: </b> {{price}} </li>
+          <br />
+        </ul>
+      {{/each}}
+    </ul>
+  {{/with}}
+</div>
