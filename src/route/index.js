@@ -655,9 +655,9 @@ router.get('/web', function (req, res) {
 
 // ================================================================
 
-router.get('/task22', function (req, res) {
-  // res.render генерує нам HTML сторінку
-=======
+// =======
+
+// =======
 router.get('/task21', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -708,7 +708,6 @@ router.get('/task21', function (req, res) {
       title: 'About modules',
       text: 'Modules with import/export statements',
 
-
       button: {
         text: 'Open link page',
         url: 'https://google.com',
@@ -721,10 +720,15 @@ router.get('/task21', function (req, res) {
         {
           text: 'Bootstrap',
           url: 'https://getbootstrap.com/',
-=======
-router.get('/facebook', function (req, res) {
-  // res.render генерує нам HTML сторінку
-=======
+        },
+      ],
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+// =======
+
+// =======
 router.get('/mac', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -805,7 +809,6 @@ router.get('/mac', function (req, res) {
         {
           name: 'USB-C to USB Adapter',
           price: 19.99,
-
         },
       ],
     },
@@ -813,7 +816,7 @@ router.get('/mac', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-=======
+// =======
 
 // ================================================================
 
@@ -911,7 +914,10 @@ router.get('/car', function (req, res) {
       },
       total: 28990,
     },
-=======
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+// =======
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -992,7 +998,8 @@ router.get('/js', function (req, res) {
 })
 
 // ================================================================
-
+router.get('/facebook', function (req, res) {
+  // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('facebook', {
@@ -1147,7 +1154,9 @@ router.get('/js', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
+// ===================
+router.get('/task22', function (req, res) {
+  // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task22', {
@@ -1203,5 +1212,8 @@ router.get('/js', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+
+
+
 // Підключаємо роутер до бек-енду
 module.exports = router
