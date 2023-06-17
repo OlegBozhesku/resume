@@ -38,7 +38,9 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -94,6 +96,7 @@ router.get('/bootstrap', function (req, res) {
 router.get('/education', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('education', {
+    // layout: 'index',
     // ↙ сюди вводимо JSON дані
     page: {
       title: 'Resume |  Education',
@@ -262,7 +265,7 @@ router.get('/work', function (req, res) {
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
-    layout: 'person',
+    layout: 'bio',
     person: {
       name: 'Emma Johnson',
       age: 32,
@@ -456,7 +459,7 @@ router.get('/bio', function (req, res) {
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
-    layout: 'program',
+    layout: 'basic',
     program: {
       excursion: {
         name: 'Cultural Tour',
