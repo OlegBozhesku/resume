@@ -1,63 +1,70 @@
-<div><h1>Programming Languages</h1></div>
-<hr />
-{{#with web}}
-  <h2>Web languages:</h2>
-  <ul>
-    {{#each languages}}
-      <li><strong>Name - </strong> {{name}}</li>
-      <p><b>Version - </b> {{version}} </p>
-      <p><b>Description - </b> {{description}} </p>
-      <ul>
-        {{#each elements}}
-          <p><em>Elements:</em></p>
-          <li><b>Name - </b> {{name}} </li>
-          <li><b>Description - </b> {{description}} </li>
-          <ul>
-            {{#each attributes}}
-              <p><em>Attributes:</em></p>
-              <li><b>Name - </b> {{name}} </li>
-              <li><b>Description - </b>
-                {{description}}
-              </li>
-            {{/each}}
-          </ul>
-        {{/each}}</ul>
-      <div>
-        {{#if properties}} <p><b>Properties:</b></p> {{/if}}
-        {{#each properties}}
-          <ul>
+<section class='ms-2'>
+  <h1 class='mb-4 mt-4'>Programming Languages</h1>
+  <hr />
+  {{#with web}}
+    <h2>Web languages:</h2>
+    <ul>
+      {{#each languages}}
+        <li><strong>Name - </strong> {{name}}</li>
+        <p><b>Version - </b> {{version}} </p>
+        <p><b>Description - </b> {{description}} </p>
+        <ul>
+          {{#each elements}}
+            <p><em>Elements:</em></p>
             <li><b>Name - </b> {{name}} </li>
             <li><b>Description - </b> {{description}} </li>
-            <li><b>Values:</b></li>
-            <ul>{{#each values}}
-                <li><em>Value - </em> {{value}} </li>
-                <li><em>Description -
-                  </em>{{description}}</li>
-                <br />
-              {{/each}}</ul>
-          </ul>
-        {{/each}}
-      </div>
-      <div>
-        {{#each functions}}
-          <p><b> Functions:</b></p>
-          <ul>
-            <li><b>Name - </b> {{name}} </li>
-            <li><b>Description - </b> {{description}} </li>
-            <li><b>Parameters: </b> </li>
             <ul>
-              {{#each parameters}}
+              {{#each attributes}}
+                <p><em>Attributes:</em></p>
                 <li><b>Name - </b> {{name}} </li>
-                <li><b>Type - </b> {{type}} </li>
                 <li><b>Description - </b>
                   {{description}}
                 </li>
               {{/each}}
             </ul>
-          </ul>
-        {{/each}}
-      </div>
-      <hr /><br />
-    {{/each}}
-  </ul>
-{{/with}}
+          {{/each}}</ul>
+        <div>
+          {{#if properties}}
+            <p><b>Properties:</b></p>
+          {{/if}}
+          {{#each properties}}
+            <ul>
+              <li><b>Name - </b> {{name}} </li>
+              <li><b>Description - </b>
+                {{description}}
+              </li>
+              <li><b>Values:</b></li>
+              <ul>{{#each values}}
+                  <li><em>Value - </em> {{value}} </li>
+                  <li><em>Description -
+                    </em>{{description}}</li>
+                {{/each}}</ul>
+            </ul>
+          {{/each}}
+        </div>
+        <div>
+          {{#each functions}}
+            <p><b> Functions:</b></p>
+            <ul>
+              <li><b>Name - </b> {{name}} </li>
+              <li><b>Description - </b>
+                {{description}}
+              </li>
+              <li><b>Parameters: </b> </li>
+              <ul>
+                {{#each parameters}}
+                  <li><b>Name - </b> {{name}} </li>
+                  <li><b>Type - </b> {{type}} </li>
+                  <li><b>Description - </b>
+                    {{description}}
+                  </li>
+                {{/each}}
+              </ul>
+            </ul>
+          {{/each}}
+        </div>
+        <hr />
+      {{/each}}
+    </ul>
+  {{/with}}
+</section>

@@ -1,3 +1,4 @@
+<main class="ms-3">
 <div>
   <h1> Name: <em>{{name}}</em>.</h1>
   <p><b> Birth:</b> {{birthdate}} in {{birthplace}}. </p>
@@ -5,9 +6,13 @@
   <p><b>Nationality:</b> {{nationality}}. </p>
   <p><b>Occupation:</b> {{occupation}}. </p>
   <p><b>Known for:</b></p>
-  <ul>{{#each known_for}}
-      <li>{{this}}</li>
-    {{/each}}</ul>
+   
+  {{#each known_for}}
+  <div class="row">
+      <div class="col-3 ps-4">{{this}}</div>
+      </div>
+    {{/each}}
+    
 </div>
 <hr />
 <div>
@@ -39,10 +44,13 @@
   <h3> Relationships:</h3>
   <ul>
     {{#each partners}}
-      <p><em>Name - </em> {{name}} </p>
-      <p><em>Relationship - </em> {{relationship}} </p>
-      <p><em>Years of marrige - </em> {{years}} </p>
-      <br />
+    <div class="card mt-3">
+      <div class="card-header">{{name}} </div>
+      <div class="card-body">{{relationship}}</div>
+      <div class="card-footer">{{years}}</div>
+
+    </div>
+      
     {{/each}}
   </ul>
 </div>
@@ -59,22 +67,30 @@
 </div>
 <hr />
 <div>
-  <h3>List of influences:</h3>
-  <ul>{{#each influences}}
-      {{this}}
-      {{#unless @last}},
-      {{else}}.
-      {{/unless}}
-    {{/each}}</ul>
+  
+  
 </div>
-<div>
-  <h3>List of influenced:</h3>
-  <ul>{{#each influenced}}
+<div class="row">
+  <div class="col-6 text-center"> 
+    <h3>List of influences:</h3>
+    {{#each influences}}
       {{this}}
       {{#unless @last}},
       {{else}}.
       {{/unless}}
-    {{/each}}</ul>
+    {{/each}}
+  </div>
+
+    <div class="col-6 text-center"> 
+    <h3>List of influences:</h3>
+    {{#each influenced}}
+      {{this}}
+      {{#unless @last}},
+      {{else}}.
+      {{/unless}}
+    {{/each}}
+  </div>
+
 </div>
 <br />
 <div>
@@ -108,3 +124,4 @@
       <br />
     {{/with}}
 </div>
+</main>
